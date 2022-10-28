@@ -17,16 +17,17 @@
         if (!header) return;
         if (header.children[0]) header = header.children[0]; // anchor content
 
-        const [_, currentVersion] = location.pathname.match(new RegExp(`^/[^/]+/([^/]+)`));
+        const [_, currentVersion] = header.innerText.match(/(\d\.\d(?:\.\d)?)/);
 
         const versions = document.createElement('span');
         versions.classList.add('_userscript_ruby_lang_version_content');
 
+        const reVerInPath = new RegExp(`${currentVersion.replaceAll('.', '\\.')}|latest`);
         [...(new Set(['2.7.0', '3.0', '3.1', currentVersion]))].sort().forEach((ver, _) => {
             if (ver != currentVersion) {
                 const anchor = document.createElement('a');
                 anchor.innerText = ver;
-                anchor.href = location.pathname.replace(currentVersion, ver);
+                anchor.href = location.pathname.replace(reVerInPath, ver);
                 versions.append(anchor);
             }
         });
