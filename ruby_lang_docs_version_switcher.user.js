@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ruby lang docs version switch
 // @namespace    https://github.com/ysjj/userscript
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       You
 // @match        https://docs.ruby-lang.org/ja/*/*.html
