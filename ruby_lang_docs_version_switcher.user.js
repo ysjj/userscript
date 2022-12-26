@@ -22,8 +22,8 @@
         const versions = document.createElement('span');
         versions.classList.add('_userscript_ruby_lang_version_content');
 
-        const reVerInPath = new RegExp(`${currentVersion.replaceAll('.', '\\.')}|latest`);
-        [...(new Set(['2.7.0', '3.0', '3.1', currentVersion]))].sort().forEach((ver, _) => {
+        const reVerInPath = new RegExp(`${currentVersion.replaceAll('.', '\\.')}|latest|master`);
+        [...(new Set(['2.7.0', '3.0', '3.1', '3.2', currentVersion]))].sort().forEach((ver, _) => {
             if (ver != currentVersion) {
                 const anchor = document.createElement('a');
                 anchor.innerText = ver;

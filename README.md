@@ -22,6 +22,12 @@ HTML 構造に強く依存するため、旧版・今後の新版で同様に使
 URL 中のバージョンを書き換えてリンクを作成しているだけなので
 切り替え後のバージョンに存在しないページは Not Found エラーページが表示されます。
 
+### 開発動機
+
+- Google 検索で辿ったページが自分が使用しているバージョンと異なり
+  手作業でブラウザのアドレスバーの URL を変更する機会が多い。
+- PostgreSQL や NodeJS などの公式サイトではバージョン切り替えが可能で羨ましい。
+
 ## ruby_on_rails_api_version_switcher.user.js
 
 ![バージョンセレクタ](/assets/images/ruby_on_rails_api_version_switcher.png)
