@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ruby on Rails API switch versions
 // @namespace    https://github.com/ysjj/userscript
-// @version      0.1
+// @version      0.2
 // @description  Add version selector on 'Ruby on Rails API'
 // @author       YAMASHITA,Junji <ysiijj+github@gmail.com>
 // @match        https://api.rubyonrails.org/*
@@ -29,7 +29,7 @@
         };
 
         const select = stylize(document.createElement('select'));
-        [...(new Set(['6.0.6', '6.1.7', '7.0.4', currentVersion]))].sort().forEach((ver, _) => {
+        [...(new Set(['6.0.6', '6.1.7', '7.0.8', '7.1.2', currentVersion]))].sort().forEach((ver, _) => {
             const option = document.createElement('option');
             if (ver == currentVersion) option.setAttribute('selected', 'selected');
             option.value = ver;
