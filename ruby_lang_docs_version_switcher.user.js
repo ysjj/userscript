@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Ruby lang docs version switch
 // @namespace    https://github.com/ysjj/userscript
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       You
 // @match        https://docs.ruby-lang.org/ja/*/*.html
@@ -23,7 +23,7 @@
         versions.classList.add('_userscript_ruby_lang_version_content');
 
         const reVerInPath = new RegExp(`${currentVersion.replaceAll('.', '\\.')}|latest|master`);
-        [...(new Set(['2.7.0', '3.0', '3.1', '3.2', currentVersion]))].sort().forEach((ver, _) => {
+        [...(new Set(['2.7.0', '3.0', '3.1', '3.2', '3.3', currentVersion]))].sort().forEach((ver, _) => {
             if (ver != currentVersion) {
                 const anchor = document.createElement('a');
                 anchor.innerText = ver;
